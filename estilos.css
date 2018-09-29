@@ -2,6 +2,8 @@
     --blanco:#FFF;
     --negro: #000;
     --naranja: #F90;
+    --gris: #333;
+    --grisclaro: #d3d3d3;
 }
 
 *{ margin: 0; padding: 0;
@@ -16,10 +18,131 @@ body{
 .cabecera{
     max-width: 1000px;
     margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px; margin-bottom: 15px;
+
 }
 
 .contenido{
     max-width: 1000px;
     margin: auto;
     background-color: var(--blanco);
+    border-radius: 8px 8px 0 0;
+
+}
+
+.cabecera h1{
+    color: var(--naranja);
+    font-size: 26px;
+}
+
+.botonera{
+    background-color: var(--naranja);
+    border-radius: 8px 8px 0 0;
+    padding: 20px;
+    margin-bottom: 25px;
+    
+
+}
+
+.botonera-lista{
+    list-style-type: none;
+    display: flex;
+
+}
+
+
+.botonera-lista a{
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: bold;
+    border-right: 1px solid var(--blanco);
+    padding: 5px 15px;
+    display: block;
+}
+
+.botonera-lista a:hover{
+    color: var(--negro);
+}
+
+.slider{
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.zona{
+    display: flex;
+
+}
+
+.izq{
+    flex-grow: 1;
+    margin-left: 4%;
+    width: 20%;
+}
+
+.categorias-listas{
+    margin-left: 12%; 
+    
+}
+
+.izq li{
+    list-style-type: none;
+    border-bottom: 1px dashed var(--gris);
+}
+
+.izq a{
+    text-decoration: none;
+    color: var(--negro);
+    font-size: 12px;
+    display: block;
+    padding: 8px 0;
+
+}
+
+.der{
+    flex-grow: 1;
+    margin: 0 4%;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    justify-content: space-around;
+}
+
+h3{
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+/* .producto{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+} */
+
+.producto img{
+    float: left;
+    width: 40%;
+
+}
+.producto p{
+    float: left;
+    font-size: 14px;
+    width: 50%;
+    margin-left: 10%;
+}
+
+#contenido{
+    margin-bottom: 50px;
+}
+
+.newsletter{
+    background-color: var(--grisclaro);
+    border: 1px solid var(--gris);
+    border-radius: 10px;
+    width: 94%;
+    margin: 0 auto;
 }
